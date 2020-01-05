@@ -446,13 +446,13 @@ footer {
   margin-top: 24px;
   line-height: 1.5;
 }
-.bottom_fotter {
+.bottom_footer {
   display: flex;
   align-self: flex-start;
   margin-top: 40px;
-  margin-left: 185px;
+  margin-left: 200px;
 }
-.all {
+.inform {
   color: #CACACA;
   font-size: 14px;
   font-family: 'Roboto Condensed', sans-serif;
