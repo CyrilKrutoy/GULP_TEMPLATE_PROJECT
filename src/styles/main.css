@@ -104,7 +104,7 @@ a {
   text-decoration: none;
   color: #4E4E4E;
 }
-:hover {
+.head:hover {
   color: #1ABB9C;
   transition: 0.5s;
 }
@@ -165,12 +165,16 @@ li {
 }
 .Service {
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
+  width: 100vw;
 }
 .servises {
   display: flex;
+  align-items: center;
+  justify-content: center;
   flex-direction: row;
+  flex-wrap: wrap;
   width: 1172px;
   height: 277px;
   border-bottom: solid 2px #DCDCDC;
@@ -208,7 +212,7 @@ li {
   background: #E8C04F;
 }
 .animation:hover {
-  animation: spin 3s linear infinite;
+  animation: spin 1s linear infinite;
 }
 @keyframes spin {
   from {
@@ -239,9 +243,10 @@ li {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  height: 442px;
+  height: 470px;
   width: 100vw;
-  margin-top: 44px;
+  margin-top: 60px;
+  font-family: 'Roboto Condensed', sans-serif;
 }
 .olw {
   display: flex;
@@ -249,7 +254,6 @@ li {
   text-transform: uppercase;
   font-weight: bold;
   font-size: 18px;
-  margin-bottom: -10px;
   margin-left: 205px;
 }
 .working {
@@ -257,15 +261,21 @@ li {
   align-items: center;
   justify-content: center;
   flex-direction: row;
+  flex-wrap: wrap;
+  margin-top: 15px;
   height: 419px;
   width: 100vw;
 }
 .work-block {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: flex-start;
+  margin-top: 30px;
   width: 396px;
-  height: 415px;
+  height: 430px;
 }
 .work-image {
-  margin-top: 30px;
   overflow: hidden;
   width: 381px;
   height: 271px;
@@ -303,7 +313,7 @@ li {
   justify-content: center;
   flex-direction: column;
   height: 231px;
-  width: 100%;
+  width: 100vw;
   background: #EFEFEF;
   margin-top: 56px;
 }
@@ -321,10 +331,10 @@ li {
 footer {
   display: flex;
   align-items: center;
-  justify-content: ccenter;
+  justify-content: center;
   flex-direction: column;
   height: 460px;
-  width: 100%;
+  width: 100vw;
   background: #212121;
   font-family: 'Merriweather', serif;
 }
@@ -332,8 +342,9 @@ footer {
   display: flex;
   align-items: start;
   justify-content: space-evenly;
+  flex-wrap: wrap;
   height: 360px;
-  width: 75%;
+  width: 75vw;
   border-bottom: 1px solid #6C6C6C;
 }
 .get_in_touch {
@@ -456,4 +467,127 @@ footer {
   color: #CACACA;
   font-size: 14px;
   font-family: 'Roboto Condensed', sans-serif;
+}
+@media (min-width: 468px) and (max-width: 768px) {
+  body {
+    overflow-y: unset;
+  }
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100vw;
+  }
+  .menu {
+    height: 6px;
+    width: 30px;
+    background: #AAAAAA;
+    display: block;
+    position: absolute;
+    top: 95px;
+    right: 15px;
+  }
+  .menu::before,
+  .menu::after {
+    content: "";
+    height: 6px;
+    width: 30px;
+    background: #AAAAAA;
+    display: block;
+    position: absolute;
+  }
+  .menu::before {
+    top: -10px;
+  }
+  .menu::after {
+    top: 10px;
+  }
+  ul {
+    display: none;
+  }
+  .banner {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    height: 300px;
+    width: 100vw;
+  }
+  .banner_img {
+    height: 300px;
+    width: 100vw;
+  }
+  .description {
+    margin-top: -300px;
+    height: 300px;
+    width: 100vw;
+  }
+  .description_h1 {
+    font-size: 25px;
+    margin-top: 90px;
+  }
+  .description_p {
+    font-size: 21px;
+    margin-top: 15px;
+  }
+  .servises {
+    align-items: center;
+    justify-content: center;
+    width: 768px;
+    height: 600px;
+  }
+  .work {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 1442px;
+    width: 100vw;
+    margin-top: 44px;
+  }
+  .working {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 2000px;
+    width: 100vw;
+  }
+  .olw {
+    margin-left: 0px;
+  }
+  .quotes {
+    height: 250px;
+    width: 100vw;
+    background: #EFEFEF;
+    margin-top: 56px;
+  }
+  .text_quote {
+    width: 445px;
+    height: 85px;
+  }
+  footer {
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    height: 1600px;
+  }
+  .footer-social {
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    height: 1460px;
+  }
+  .get_in_touch {
+    margin-right: 0px;
+  }
+  .twitter {
+    margin-right: 0px;
+  }
+  .popular {
+    margin-right: 0px;
+  }
+  .bottom_footer {
+    align-self: center;
+    margin-left: 0px;
+  }
 }
