@@ -20,14 +20,12 @@
   align-items: @aling;
   justify-content: @just;
 }
-
 body {
   display: flex;
   align-self: center;
   flex-direction: column;
   background: @bgColor;
 }
-
 header {
   display: flex;
   align-items: center;
@@ -75,7 +73,6 @@ a {
 li {
 padding-right: 20px;
           }
-
 .banner{
   display: flex;
   align-items: center;
@@ -95,18 +92,24 @@ padding-right: 20px;
   flex-direction: column;
   margin-top: -605px;
   height: 600px;
-  width: 988px;
+  width: 100vw;
 }
 .description_h1{
+  text-align: center;
   font-size: 40px;
   font-weight: 500;
   color: #f3f3f3;
   margin-top: 197px;
+  width: 75%;
+  height: fit-content;
 }
 .description_p{
+  text-align: center;
   font-size: 32px;
   color: #a8a8a8;
   margin-top: 43px;
+  width: 60%;
+  height: fit-content;
 }
 .see{
   .flex(center, center);
@@ -129,15 +132,15 @@ padding-right: 20px;
 .Service{
 .flex(center, center);
   width: 100vw;
+  height: fit-content;
 }
 .servises{
   .flex(center, center);
   flex-direction: row;
   flex-wrap: wrap;
   width: 1172px;
-  height: 277px;
+  height: fit-content;
   border-bottom: solid 2px #DCDCDC;
-
 }
 .info_animation{
   display: flex;
@@ -172,7 +175,6 @@ padding-right: 20px;
 .animation:hover{
   animation: spin 1s linear infinite;
 }
-
 @keyframes spin {
   from {
       transform: rotateY(0deg);
@@ -202,7 +204,7 @@ padding-right: 20px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  height: 470px;
+  height: fit-content;
   width: 100vw;
   margin-top: 60px;
   font-family: @font-family2;
@@ -220,9 +222,8 @@ padding-right: 20px;
   flex-direction: row;
   flex-wrap: wrap;
   margin-top: 15px;
-  height: 419px;
+  height: fit-content;
   width: 100vw;
-
 }
 .work-block {
     display: flex;
@@ -278,8 +279,8 @@ padding-right: 20px;
 }
 .text_quote {
   text-align: center;
-  width: 734px;
-  height: 51px;
+  width: 50vw;
+  height: fit-content;
   color: #A1A1A1;
   font-size: 20px;
   margin-top: 25px;
@@ -287,7 +288,7 @@ padding-right: 20px;
 footer {
   .flex(center,center);
   flex-direction: column;
-  height: 460px;
+  height: fit-content;
   width: 100vw;
   background: #212121;
   font-family: @font-family4;
@@ -297,7 +298,7 @@ footer {
   align-items: start;
   justify-content: space-evenly;
   flex-wrap: wrap;
-  height: 360px;
+  height: fit-content;
   width: 75vw;
   border-bottom: 1px solid #6C6C6C;
     }
@@ -370,7 +371,6 @@ footer {
   top: -54px;
   left: -20px;
       }
-
 .popular {
   width: 257px;
   height: 360px;
@@ -394,10 +394,10 @@ footer {
   color: #CACACA;
   font-size: 14px;
       }
-
 .about_us {
   width: 257px;
   height: 360px;
+ }
 .A_us {
   color: #6C6C6C;
   text-transform: uppercase;
@@ -412,12 +412,12 @@ footer {
   margin-top: 24px;
   line-height: 1.5;
           }
-    }
 .bottom_footer {
   display: flex;
   align-self: flex-start;
   margin-top: 40px;
   margin-left: 200px;
+  margin-bottom: 50px;
         }
 .inform {
   color: #CACACA;
@@ -425,15 +425,10 @@ footer {
   font-family: @font-family;
     }
 @media (min-width: 468px) and (max-width: 768px) {
-body {
-    overflow-y: unset;
-       } 
+  
 header {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction:column;
-    width: 100vw;
+  .flex(center, center);
+  flex-direction:column;
       }
 .menu{
         height: 6px;
@@ -466,49 +461,42 @@ header {
     align-items: center;
     flex-direction: column;
     height: 300px;
-    width: 100vw;
       }
 .banner_img{
     height: 300px;
-    width: 100vw;
       }
 .description{
     margin-top: -300px;
     height: 300px;
-    width: 100vw;
       }
 .description_h1{
     font-size: 25px;
-    margin-top: 90px;
+    margin-top: 85px;
+    width: 85%;
       }
 .description_p{
     font-size: 21px;
     margin-top: 15px;
+    width: 80%;
       }
+.see{
+  margin-top: 18px;
+  }
 .servises{
-  align-items: center;
-  justify-content: center;
   width: 768px;
-  height: 600px;
       }
 .work{
     .flex(center, center);
-    height: 1442px;
-    width: 100vw;
     margin-top: 44px;
       }
 .working{
-    .flex(center, center);
     flex-direction: column;
-    height: 2000px;
-    width: 100vw;
     }
 .olw{
     margin-left: 0px;
      }
 .quotes {
     height: 250px;
-    width: 100vw;
     background: #EFEFEF;
     margin-top: 56px;
       }
@@ -542,3 +530,66 @@ height: 1600px;
   margin-left: 0px;
           }
 }
+@media (max-width: 468px){
+  header {
+    .flex(center, center);
+    flex-direction:column;
+        }
+  .menu{
+          height: 6px;
+          width: 30px;
+          background: #AAAAAA;
+          display: block;
+          position: absolute;
+          top: 95px;
+          right: 15px;
+        }
+  .menu::before, 
+  .menu::after {
+    content: "";
+          height: 6px;
+          width: 30px;
+          background: #AAAAAA;
+          display: block;
+          position: absolute;
+        }
+  .menu::before{
+          top:-10px;
+        }
+  .menu::after{
+          top:10px;
+        }
+        ul{
+          display: none;
+        }
+.banner{
+    height: 300px;
+      }
+.banner_img{
+    height: 300px;
+      }
+.description{
+    margin-top: -300px;
+    height: 300px;
+      }
+.description_h1{
+    font-size: 25px;
+    margin-top: 90px;
+    width: 75vw;
+    height: fit-content;
+      }
+.description_p{
+  display: none;
+      }
+.work{
+  .flex(center, center);
+  margin-top: 44px;
+          }
+.olw {
+  margin-left: 0px;
+    }
+.bottom_footer {
+  align-self: center;
+  margin-left: 0px;
+          }
+        }

@@ -130,18 +130,24 @@ li {
   flex-direction: column;
   margin-top: -605px;
   height: 600px;
-  width: 988px;
+  width: 100vw;
 }
 .description_h1 {
+  text-align: center;
   font-size: 40px;
   font-weight: 500;
   color: #f3f3f3;
   margin-top: 197px;
+  width: 75%;
+  height: fit-content;
 }
 .description_p {
+  text-align: center;
   font-size: 32px;
   color: #a8a8a8;
   margin-top: 43px;
+  width: 60%;
+  height: fit-content;
 }
 .see {
   display: flex;
@@ -168,6 +174,7 @@ li {
   align-items: center;
   justify-content: center;
   width: 100vw;
+  height: fit-content;
 }
 .servises {
   display: flex;
@@ -176,7 +183,7 @@ li {
   flex-direction: row;
   flex-wrap: wrap;
   width: 1172px;
-  height: 277px;
+  height: fit-content;
   border-bottom: solid 2px #DCDCDC;
 }
 .info_animation {
@@ -243,7 +250,7 @@ li {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  height: 470px;
+  height: fit-content;
   width: 100vw;
   margin-top: 60px;
   font-family: 'Roboto Condensed', sans-serif;
@@ -263,7 +270,7 @@ li {
   flex-direction: row;
   flex-wrap: wrap;
   margin-top: 15px;
-  height: 419px;
+  height: fit-content;
   width: 100vw;
 }
 .work-block {
@@ -322,8 +329,8 @@ li {
 }
 .text_quote {
   text-align: center;
-  width: 734px;
-  height: 51px;
+  width: 50vw;
+  height: fit-content;
   color: #A1A1A1;
   font-size: 20px;
   margin-top: 25px;
@@ -333,7 +340,7 @@ footer {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  height: 460px;
+  height: fit-content;
   width: 100vw;
   background: #212121;
   font-family: 'Merriweather', serif;
@@ -343,7 +350,7 @@ footer {
   align-items: start;
   justify-content: space-evenly;
   flex-wrap: wrap;
-  height: 360px;
+  height: fit-content;
   width: 75vw;
   border-bottom: 1px solid #6C6C6C;
 }
@@ -443,14 +450,14 @@ footer {
   width: 257px;
   height: 360px;
 }
-.about_us .A_us {
+.A_us {
   color: #6C6C6C;
   text-transform: uppercase;
   font-size: 18px;
   font-weight: bold;
   margin-top: 51px;
 }
-.about_us .a_u {
+.a_u {
   color: #CACACA;
   font-size: 14px;
   display: flex;
@@ -462,6 +469,7 @@ footer {
   align-self: flex-start;
   margin-top: 40px;
   margin-left: 200px;
+  margin-bottom: 50px;
 }
 .inform {
   color: #CACACA;
@@ -469,15 +477,11 @@ footer {
   font-family: 'Roboto Condensed', sans-serif;
 }
 @media (min-width: 468px) and (max-width: 768px) {
-  body {
-    overflow-y: unset;
-  }
   header {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    width: 100vw;
   }
   .menu {
     height: 6px;
@@ -511,53 +515,44 @@ footer {
     align-items: center;
     flex-direction: column;
     height: 300px;
-    width: 100vw;
   }
   .banner_img {
     height: 300px;
-    width: 100vw;
   }
   .description {
     margin-top: -300px;
     height: 300px;
-    width: 100vw;
   }
   .description_h1 {
     font-size: 25px;
-    margin-top: 90px;
+    margin-top: 85px;
+    width: 85%;
   }
   .description_p {
     font-size: 21px;
     margin-top: 15px;
+    width: 80%;
+  }
+  .see {
+    margin-top: 18px;
   }
   .servises {
-    align-items: center;
-    justify-content: center;
     width: 768px;
-    height: 600px;
   }
   .work {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 1442px;
-    width: 100vw;
     margin-top: 44px;
   }
   .working {
-    display: flex;
-    align-items: center;
-    justify-content: center;
     flex-direction: column;
-    height: 2000px;
-    width: 100vw;
   }
   .olw {
     margin-left: 0px;
   }
   .quotes {
     height: 250px;
-    width: 100vw;
     background: #EFEFEF;
     margin-top: 56px;
   }
@@ -585,6 +580,73 @@ footer {
   }
   .popular {
     margin-right: 0px;
+  }
+  .bottom_footer {
+    align-self: center;
+    margin-left: 0px;
+  }
+}
+@media (max-width: 468px) {
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .menu {
+    height: 6px;
+    width: 30px;
+    background: #AAAAAA;
+    display: block;
+    position: absolute;
+    top: 95px;
+    right: 15px;
+  }
+  .menu::before,
+  .menu::after {
+    content: "";
+    height: 6px;
+    width: 30px;
+    background: #AAAAAA;
+    display: block;
+    position: absolute;
+  }
+  .menu::before {
+    top: -10px;
+  }
+  .menu::after {
+    top: 10px;
+  }
+  ul {
+    display: none;
+  }
+  .banner {
+    height: 300px;
+  }
+  .banner_img {
+    height: 300px;
+  }
+  .description {
+    margin-top: -300px;
+    height: 300px;
+  }
+  .description_h1 {
+    font-size: 25px;
+    margin-top: 90px;
+    width: 75vw;
+    height: fit-content;
+  }
+  .description_p {
+    display: none;
+  }
+  .work {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 44px;
+  }
+  .olw {
+    margin-left: 0px;
   }
   .bottom_footer {
     align-self: center;
