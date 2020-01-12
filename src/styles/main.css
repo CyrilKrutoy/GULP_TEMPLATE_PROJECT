@@ -59,6 +59,7 @@
   padding: 0;
 }
 body {
+  overflow-x: hidden;
   display: flex;
   align-self: center;
   flex-direction: column;
@@ -110,6 +111,64 @@ a {
 }
 li {
   padding-right: 20px;
+}
+.media_menu {
+  display: none;
+  width: 100vw;
+  height: 45px;
+  background: #212121;
+}
+#burger_menu {
+  position: absolute;
+  top: 141px;
+  right: 20px;
+  display: none;
+}
+#burger_menu:checked + .burgermenu {
+  height: 230px;
+}
+#burger {
+  height: 23px;
+  width: 25px;
+  display: block;
+  position: absolute;
+  top: 137px;
+  right: 15px;
+  z-index: 4;
+  cursor: pointer;
+  background: url("../images/burger.png");
+}
+.burgermenu {
+  height: 0;
+  width: 100vw;
+  position: relative;
+  left: 0;
+  top: 45px;
+  font-family: 'Roboto Condensed', sans-serif;
+  background-color: rgba(75, 75, 75, 0.9);
+  transition: height 0.5s ease;
+  z-index: 3;
+  overflow: hidden;
+}
+.ulburgermenu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  list-style-type: none;
+  color: #dcdcdc;
+  text-align: center;
+  width: 100vw;
+}
+.liburgermenu {
+  margin: 10px 0 10px 0;
+  cursor: pointer;
+  transition: color 0.1s ease-out;
+  padding: 0;
+}
+.liburgermenu:hover {
+  color: #1abb9c;
+  transition: 0.5s;
 }
 .banner {
   display: flex;
@@ -484,31 +543,10 @@ footer {
     flex-direction: column;
   }
   .menu {
-    height: 6px;
-    width: 30px;
-    background: #AAAAAA;
-    display: block;
-    position: absolute;
-    top: 95px;
-    right: 15px;
-  }
-  .menu::before,
-  .menu::after {
-    content: "";
-    height: 6px;
-    width: 30px;
-    background: #AAAAAA;
-    display: block;
-    position: absolute;
-  }
-  .menu::before {
-    top: -10px;
-  }
-  .menu::after {
-    top: 10px;
-  }
-  ul {
     display: none;
+  }
+  .media_menu {
+    display: block;
   }
   .banner {
     display: flex;
@@ -594,31 +632,10 @@ footer {
     flex-direction: column;
   }
   .menu {
-    height: 6px;
-    width: 30px;
-    background: #AAAAAA;
-    display: block;
-    position: absolute;
-    top: 95px;
-    right: 15px;
-  }
-  .menu::before,
-  .menu::after {
-    content: "";
-    height: 6px;
-    width: 30px;
-    background: #AAAAAA;
-    display: block;
-    position: absolute;
-  }
-  .menu::before {
-    top: -10px;
-  }
-  .menu::after {
-    top: 10px;
-  }
-  ul {
     display: none;
+  }
+  .media_menu {
+    display: block;
   }
   .banner {
     height: 300px;
